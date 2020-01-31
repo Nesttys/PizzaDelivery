@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.myapplication.MapViewFragment;
 import com.example.myapplication.R;
 
 /**
@@ -40,10 +41,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 return PlaceholderFragment.newInstance(2);
 
             case 3:
-                return PlaceholderFragment.newInstance(3);
+                return MapViewFragment.getInstance();
 
             default:
-                return PlaceholderFragment.newInstance(4);
+                return PlaceholderFragment.newInstance(3);
+
         }
     }
 

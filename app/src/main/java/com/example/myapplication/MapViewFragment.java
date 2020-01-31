@@ -45,7 +45,7 @@ public class MapViewFragment extends Fragment {
                 googleMap = mMap;
 
                 // For showing a move to my location button
-                googleMap.setMyLocationEnabled(true);
+                //googleMap.setMyLocationEnabled(true);
 
                 // For dropping a marker at a point on the Map
                 LatLng sydney = new LatLng(-34, 151);
@@ -60,11 +60,8 @@ public class MapViewFragment extends Fragment {
         return rootView;
     }
 
-    public static MapViewFragment getInstance(int index) {
+    public static MapViewFragment getInstance() {
         MapViewFragment mapFragment = new MapViewFragment();
-        Bundle bundle = new Bundle();
-        bundle.putInt(ARG_SECTION_NUMBER, index);
-        mapFragment.setArguments(bundle);
         return mapFragment;
     }
 

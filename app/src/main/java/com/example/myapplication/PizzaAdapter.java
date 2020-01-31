@@ -34,7 +34,7 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
         Picasso.get().load(list.get(position).getPhotoId()).into(holder.image);
         holder.name.setText(list.get(position).getName());
         holder.components.setText(list.get(position).getComponents());
-        holder.price.setText(list.get(position).getPrice() + "");
+        holder.price.setText("от "+ list.get(position).getPrice() + " грн");
     }
 
     @Override
