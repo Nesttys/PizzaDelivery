@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="tab_text_1">Акции</string>
+    <string name="tab_text_2">Пицца</string>
+    <string name="tab_text_3">Напитки</string>
+    <string name="tab_text_4">Карта</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
