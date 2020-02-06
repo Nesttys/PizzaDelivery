@@ -18,12 +18,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:id="@+id/pizza_photo"
-                />
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/pizza_name"
+                android:textColor="#000"
                 android:textSize="30sp"
                 android:layout_below="@+id/pizza_photo" />
 
@@ -40,6 +42,15 @@
                 android:id="@+id/pizza_price"
                 android:textSize="30sp"
                 android:layout_below="@+id/pizza_components" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="14dp"
+                android:text="заказать" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

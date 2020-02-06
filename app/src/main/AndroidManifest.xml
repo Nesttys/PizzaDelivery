@@ -14,7 +14,7 @@
             android:value="AIzaSyDhsNEN2z7CVHMCm1zI_WE523ZuePvrRYE" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.pizzadelivery.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
