@@ -49,7 +49,11 @@ public class MapViewFragment extends Fragment {
 
                 // For dropping a marker at a point on the Map
                 LatLng sydney = new LatLng(-34, 151);
+                LatLng sydney1 = new LatLng(-35, 152);
+                LatLng sydney2 = new LatLng(-36, 153);
                 googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker Title").snippet("Marker Description"));
+                googleMap.addMarker(new MarkerOptions().position(sydney1).snippet("Marker Description1"));
+                googleMap.addMarker(new MarkerOptions().position(sydney2));
 
                 // For zooming automatically to the location of the marker
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(sydney).zoom(12).build();

@@ -3,12 +3,14 @@ package com.example.pizzadelivery;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.R;
 import com.example.pizzadelivery.Model.Stocks;
 import com.squareup.picasso.Picasso;
 
@@ -42,12 +44,15 @@ public class StocksAdapter extends RecyclerView.Adapter<StocksAdapter.MyViewHold
         ImageView image;
         TextView name;
         TextView components;
+        Button order;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(com.example.myapplication.R.id.pizza_photo);
             name = itemView.findViewById(com.example.myapplication.R.id.pizza_name);
             components = itemView.findViewById(com.example.myapplication.R.id.pizza_components);
+            order = itemView.findViewById(R.id.order);
+            order.setVisibility(View.GONE);
         }
     }
 }
