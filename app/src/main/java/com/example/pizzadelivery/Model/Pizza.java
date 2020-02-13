@@ -44,13 +44,4 @@ public class Pizza {
         this.components = components;
         this.price = price;
     }
-//    private List<Pizza> pizzaList;
-//
-//    private void initializeData() {
-//        pizzaList = new ArrayList<>();
-//        pizzaList.add(new Pizza("Пеперони", "Моцарелла, Салями", R.drawable.ic_launcher_background, 150));
-//        pizzaList.add(new Pizza("Пеперони", "Моцарелла, Салями", R.drawable.ic_launcher_background, 150));
-//        pizzaList.add(new Pizza("Пеперони", "Моцарелла, Салями", R.drawable.ic_launcher_background, 150));
-//        pizzaList.add(new Pizza("Пеперони", "Моцарелла, Салями", R.drawable.ic_launcher_background, 150));
-//    }
 }
