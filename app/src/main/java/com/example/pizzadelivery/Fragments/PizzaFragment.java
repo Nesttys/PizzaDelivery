@@ -47,7 +47,4 @@ public class PizzaFragment extends Fragment {
 
         return view;
     }
-
-
-
 }

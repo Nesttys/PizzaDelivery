@@ -21,6 +21,11 @@ public class DrinksFragment extends Fragment {
 
     public DrinksFragment() { }
 
+    public static DrinksFragment newInstance() {
+        DrinksFragment fragment = new DrinksFragment();
+        return fragment;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
