@@ -35,7 +35,7 @@ public class DrinksFragment extends Fragment {
         drinksList.add(new Drinks("http://i.imgur.com/DvpvklR.png", "Маргарита", "Моцарелла, Салями, A"));
         drinksList.add(new Drinks("http://i.imgur.com/DvpvklR.png", "4 Сыра", "Моцарелла, Салями, B"));
 
-        View view = inflater.inflate(R.layout.fragment_blank, container, false);
+        View view = inflater.inflate(R.layout.drinks_fragment, container, false);
         recyclerView = view.findViewById(R.id.recycler_view_drinks);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
