@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="350dp"
-    android:padding="16dp"
+    android:layout_width="match_parent" android:layout_height="315dp"
     >
 
     <androidx.cardview.widget.CardView
@@ -12,11 +11,12 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:padding="5dp"
+            >
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="200dp"
                 android:id="@+id/pizza_photo"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop" />
@@ -37,21 +37,21 @@
                 android:layout_below="@+id/pizza_name" />
 
             <TextView
+                android:id="@+id/pizza_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/pizza_price"
-                android:textSize="30sp"
-                android:layout_below="@+id/pizza_components" />
+                android:layout_below="@+id/pizza_components"
+                android:textSize="30sp" />
 
             <Button
+                android:id="@+id/order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="15dp"
                 android:layout_marginBottom="14dp"
-                android:text="заказать"
-                android:id="@+id/order"/>
+                android:text="заказать" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
