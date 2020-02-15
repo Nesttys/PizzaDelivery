@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,7 +18,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder> implements View.OnClickListener {
+public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder> implements View.OnClickListener, RadioGroup.OnCheckedChangeListener {
 
     List<Pizza> pizzaList;
 
@@ -47,12 +47,12 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
                 AlertDialog.Builder builder = new AlertDialog.Builder(holder.itemView.getContext())
                         .setView(view);
 
-                RadioButton btsmall = view.findViewById(R.id.rdsmall);
-                RadioButton btmedium = view.findViewById(R.id.rdmedium);
-                RadioButton btlarge = view.findViewById(R.id.rdlarge);
-                RadioButton btstandart = view.findViewById(R.id.rdstandart);
-                RadioButton btthin = view.findViewById(R.id.rdthin);
-                RadioButton bthotdog = view.findViewById(R.id.rdhotdog);
+//                RadioButton btsmall = view.findViewById(R.id.rdsmall);
+//                RadioButton btmedium = view.findViewById(R.id.rdmedium);
+//                RadioButton btlarge = view.findViewById(R.id.rdlarge);
+//                RadioButton btstandart = view.findViewById(R.id.rdstandart);
+//                RadioButton btthin = view.findViewById(R.id.rdthin);
+//                RadioButton bthotdog = view.findViewById(R.id.rdhotdog);
 
                 AlertDialog dialog = builder.create();
                 dialog.show();
@@ -68,6 +68,16 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
 
     @Override
     public void onClick(View v) {
+
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        StringBuilder str;
+        switch (checkedId){
+            case R.id.rdsmall:
+
+        }
 
     }
 
