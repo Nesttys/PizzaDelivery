@@ -100,7 +100,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -110,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btsendemail"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
@@ -122,7 +122,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tvPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
 import com.example.pizzadelivery.Model.Stocks;
-import com.example.pizzadelivery.StocksAdapter;
+import com.example.pizzadelivery.Adapters.StocksAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

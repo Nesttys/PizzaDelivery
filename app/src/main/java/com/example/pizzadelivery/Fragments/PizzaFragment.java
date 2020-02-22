@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pizzadelivery.Model.Pizza;
-import com.example.pizzadelivery.PizzaAdapter;
+import com.example.pizzadelivery.Adapters.PizzaAdapter;
 import com.example.myapplication.R;
 
 import java.util.ArrayList;
