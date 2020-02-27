@@ -84,19 +84,22 @@
             android:id="@+id/rdstandart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Standart" />
+            android:text="Standart"
+            />
 
         <RadioButton
             android:id="@+id/rdthin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thin" />
+            android:text="Thin"
+            />
 
         <RadioButton
             android:id="@+id/rdhotdog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hot-dog" />
+            android:text="Hot-dog"
+            />
     </RadioGroup>
 
     <TextView
@@ -113,26 +116,22 @@
         android:id="@+id/btsendemail"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWeight" />
 
     <TextView
         android:id="@+id/tvPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:text="Цена"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.822" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"

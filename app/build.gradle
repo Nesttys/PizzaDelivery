@@ -39,10 +39,14 @@ dependencies {
     implementation 'com.google.maps:google-maps-services:0.2.4'
     implementation 'org.slf4j:slf4j-nop:1.7.25'
 
+    //implementation group: 'com.sun.mail', name: 'android-activation', version: '1.6.2'
+    //implementation group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+
     implementation group: 'javax.activation', name: 'activation', version: '1.1.1'
-    implementation group: 'javax.mail', name: 'mail', version: '1.4'
+    implementation group: 'javax.mail', name: 'mail', version: '1.4.7'
     implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
     implementation group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '2.3.0'
     implementation group: 'com.sun.xml.bind', name: 'jaxb-core', version: '2.3.0'
+
 
 }
