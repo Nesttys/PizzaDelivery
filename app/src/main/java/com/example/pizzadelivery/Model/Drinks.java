@@ -1,32 +1,20 @@
 package com.example.pizzadelivery.Model;
 
 public class Drinks {
-    String photoId;
-    String name;
-    String components;
+    private String photoId;
+    private String name;
+    private String components;
 
     public String getPhotoId() {
         return photoId;
-    }
-
-    public void setPhotoId(String photoId) {
-        this.photoId = photoId;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getComponents() {
         return components;
-    }
-
-    public void setComponents(String components) {
-        this.components = components;
     }
 
     public Drinks(String photoId, String name, String components) {

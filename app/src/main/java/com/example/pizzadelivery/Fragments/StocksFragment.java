@@ -20,15 +20,14 @@ import java.util.List;
 
 public class StocksFragment extends Fragment {
 
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
 
     public StocksFragment() {
 
     }
 
     public static StocksFragment newInstance() {
-        StocksFragment fragment = new StocksFragment();
-        return fragment;
+        return new StocksFragment();
     }
 
     @Override

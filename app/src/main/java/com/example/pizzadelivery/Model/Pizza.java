@@ -2,40 +2,24 @@ package com.example.pizzadelivery.Model;
 
 public class Pizza {
     private String name;
-    String components;
-    String photoId;
-    int price;
+    private String components;
+    private String photoId;
+    private int price;
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getComponents() {
         return components;
     }
 
-    public void setComponents(String components) {
-        this.components = components;
-    }
-
     public String getPhotoId() {
         return photoId;
     }
 
-    public void setPhotoId(String photoId) {
-        this.photoId = photoId;
-    }
-
     public int getPrice() {
         return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public Pizza(String photoId, String name, String components, int price) {

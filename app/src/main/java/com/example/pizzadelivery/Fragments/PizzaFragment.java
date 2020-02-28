@@ -18,11 +18,10 @@ import java.util.List;
 
 public class PizzaFragment extends Fragment {
 
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
 
     public static PizzaFragment newInstance() {
-        PizzaFragment fragment = new PizzaFragment();
-        return fragment;
+        return new PizzaFragment();
     }
 
 

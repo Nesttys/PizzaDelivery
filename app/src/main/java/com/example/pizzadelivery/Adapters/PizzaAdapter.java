@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -20,25 +19,21 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder> implements View.OnClickListener {
+public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder>
+        implements RadioGroup.OnCheckedChangeListener {
 
-    List<Pizza> pizzaList;
-    StringBuilder str ;
+    private List<Pizza> pizzaList;
+    private StringBuilder str ;
 
-    TextView tvWeight;
-    TextView tvPrice;
+    private TextView tvWeight;
+    private TextView tvPrice;
+    private TextView tvIngridients;
+    private TextView tvNameOfpizza;
 
-    RadioGroup rg1;
-    RadioGroup rg2;
+    private RadioGroup rg1;
+    private RadioGroup rg2;
 
-    RadioButton rdsmall;
-    RadioButton rdmedium;
-    RadioButton rdlarge;
-
-    RadioButton rdstandart;
-    RadioButton rdthin;
-    RadioButton rdhotdog;
-    Email email;
+    private Email email;
 
     public PizzaAdapter(List<Pizza> pizzaList) {
         this.pizzaList = pizzaList;
@@ -47,12 +42,13 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(com.example.myapplication.R.layout.card_view,parent,false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(com.example.myapplication.R.layout.card_view,parent,false);
         return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
         Picasso.get().load(pizzaList.get(position).getPhotoId()).into(holder.image);
         holder.name.setText(pizzaList.get(position).getName());
         holder.components.setText(pizzaList.get(position).getComponents());
@@ -66,74 +62,27 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
                         .setView(view);
 
                 str = new StringBuilder();
-                rdsmall = view.findViewById(R.id.rdsmall);
-                rdsmall.isChecked();
-
-                rdmedium = view.findViewById(R.id.rdmedium);
-                rdmedium.isChecked();
-
-                rdlarge = view.findViewById(R.id.rdlarge);
-                rdlarge.isChecked();
-
-                rdstandart = view.findViewById(R.id.rdstandart);
-                rdstandart.isChecked();
-
-                rdthin = view.findViewById(R.id.rdthin);
-                rdthin.isChecked();
-
-                rdhotdog = view.findViewById(R.id.rdhotdog);
-                rdhotdog.isChecked();
 
                 tvWeight = view.findViewById(R.id.tvWeight);
                 tvPrice = view.findViewById(R.id.tvPrice);
+                tvNameOfpizza = view.findViewById(R.id.nameofpizza);
+                tvIngridients = view.findViewById(R.id.ingridientsofpizza);
 
                 rg1 =view.findViewById(R.id.radioGroup);
-                rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(RadioGroup group, int checkedId) {
-                        switch (checkedId) {
-                            case R.id.rdsmall:
-                                tvWeight.setText("500g");
-                                tvPrice.setText("88");
-                                str.append("Small pizza 500g 88grn");
-                            case R.id.rdmedium:
-                                tvWeight.setText("500g");
-                                tvPrice.setText("165");
-                                str.append("Medium pizza");
-                            case R.id.rdlarge:
-                                tvWeight.setText("500g");
-                                tvPrice.setText("200");
-                                str.append("Large pizza");
-                            default:
-                                str.append("skdjfsdkplf");
-                        }
-                    }
-                });
+                rg1.setOnCheckedChangeListener(PizzaAdapter.this);
 
                 rg2 = view.findViewById(R.id.radioGroup2);
-                rg2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(RadioGroup group, int checkedId) {
-                        switch (checkedId) {
-                            case R.id.rdstandart:
-                                str.append(" Standart pizza");
-                            case R.id.rdthin:
-                                str.append(" Thin pizza");
-                            case R.id.rdhotdog:
-                                str.append(" Hot-dog pizza");
+                rg2.setOnCheckedChangeListener(PizzaAdapter.this);
 
-                            default:
-                                str.append("skdjfsdkplf");
-                        }
-                    }
-                });
+                tvNameOfpizza.setText(pizzaList.get(position).getName());
+                tvIngridients.setText(pizzaList.get(position).getComponents());
 
                 Button btSendemail = view.findViewById(R.id.btsendemail);
                 btSendemail.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         email = new Email();
-                        email.sendMail("pizza");
+                        email.sendMail(str.toString());
                     }
                 });
                 AlertDialog dialog = builder.create();
@@ -147,48 +96,51 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
     public int getItemCount() {
         return pizzaList.size();
     }
-
     @Override
-    public void onClick(View v) {
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        switch (checkedId){
+            case R.id.rdsmall:
+                tvWeight.setText("500g");
+                tvPrice.setText("88grn");
+                str.append("Small pizza 500g 88grn");
+                break;
+            case R.id.rdmedium:
+                tvWeight.setText("500g");
+                tvPrice.setText("165grn");
+                str.append("Medium pizza");
+                break;
 
+            case R.id.rdlarge:
+                tvWeight.setText("500g");
+                tvPrice.setText("200grn");
+                str.append("Large pizza");
+                break;
+
+            case R.id.rdstandart:
+                str.append(" Standart pizza");
+                break;
+
+            case R.id.rdthin:
+                str.append(" Thin pizza");
+                break;
+
+            case R.id.rdhotdog:
+                str.append(" Hot-dog pizza");
+                break;
+
+            default:
+                str.append("skdjfsdkplf");
+        }
     }
 
-//    @Override
-//    public void onCheckedChanged(RadioGroup group, int checkedId) {
-//        switch (checkedId){
-//            case R.id.rdsmall:
-//                tvWeight.setText("500g");
-//                tvPrice.setText("88");
-//                str.append("Small pizza 500g 88grn");
-//            case R.id.rdmedium:
-//                tvWeight.setText("500g");
-//                tvPrice.setText("165");
-//                str.append("Medium pizza");
-//            case R.id.rdlarge:
-//                tvWeight.setText("500g");
-//                tvPrice.setText("200");
-//                str.append("Large pizza");
-//
-//            case R.id.rdstandart:
-//                str.append(" Standart pizza");
-//            case R.id.rdthin:
-//                str.append(" Thin pizza");
-//            case R.id.rdhotdog:
-//                str.append(" Hot-dog pizza");
-//
-//            default:
-//                str.append("skdjfsdkplf");
-//        }
-//    }
-
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    static class MyViewHolder extends RecyclerView.ViewHolder{
         ImageView image;
         TextView name;
         TextView components;
         TextView price;
         Button order;
 
-        public MyViewHolder(@NonNull View itemView) {
+        MyViewHolder(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(com.example.myapplication.R.id.pizza_photo);
             name = itemView.findViewById(com.example.myapplication.R.id.pizza_name);

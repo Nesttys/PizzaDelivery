@@ -19,11 +19,8 @@ import java.util.List;
 public class DrinksFragment extends Fragment {
     RecyclerView recyclerView;
 
-    public DrinksFragment() { }
-
     public static DrinksFragment newInstance() {
-        DrinksFragment fragment = new DrinksFragment();
-        return fragment;
+        return new DrinksFragment();
     }
 
     @Override
