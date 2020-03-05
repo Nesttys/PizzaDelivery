@@ -1,4 +1,4 @@
-package com.example.pizzadelivery.Adapters;
+package com.example.pizzadelivery.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
-import com.example.pizzadelivery.Model.Drinks;
+import com.example.pizzadelivery.model.Drinks;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.pizzadelivery;
+package com.example.pizzadelivery.activity;
 
 import android.os.Bundle;
 import android.view.View;

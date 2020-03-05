@@ -8,11 +8,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.pizzadelivery.Fragments.DrinksFragment;
-import com.example.pizzadelivery.Fragments.PizzaFragment;
-import com.example.pizzadelivery.Fragments.MapViewFragment;
+import com.example.pizzadelivery.fragments.DrinksFragment;
+import com.example.pizzadelivery.fragments.PizzaFragment;
+import com.example.pizzadelivery.fragments.MapViewFragment;
 import com.example.myapplication.R;
-import com.example.pizzadelivery.Fragments.StocksFragment;
+import com.example.pizzadelivery.fragments.StocksFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to

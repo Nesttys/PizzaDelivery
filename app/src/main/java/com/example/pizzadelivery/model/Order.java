@@ -1,4 +1,4 @@
-package com.example.pizzadelivery.Model;
+package com.example.pizzadelivery.model;
 
 public class Order {
     private String stringOrder;

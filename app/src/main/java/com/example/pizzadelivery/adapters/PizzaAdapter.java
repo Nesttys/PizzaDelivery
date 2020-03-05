@@ -1,4 +1,4 @@
-package com.example.pizzadelivery.Adapters;
+package com.example.pizzadelivery.adapters;
 
 import android.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
 import com.example.pizzadelivery.Email;
-import com.example.pizzadelivery.Model.Pizza;
+import com.example.pizzadelivery.model.Pizza;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -81,8 +81,9 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
                 btSendemail.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        email = new Email();
-                        email.sendMail(str.toString());
+//                        email = new Email();
+//                        email.sendMail(str.toString());
+
                     }
                 });
                 AlertDialog dialog = builder.create();

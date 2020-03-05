@@ -1,4 +1,4 @@
-package com.example.pizzadelivery.Fragments;
+package com.example.pizzadelivery.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
-import com.example.pizzadelivery.Model.Stocks;
-import com.example.pizzadelivery.Adapters.StocksAdapter;
+import com.example.pizzadelivery.model.Stocks;
+import com.example.pizzadelivery.adapters.StocksAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

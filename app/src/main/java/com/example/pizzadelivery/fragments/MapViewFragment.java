@@ -1,4 +1,4 @@
-package com.example.pizzadelivery.Fragments;
+package com.example.pizzadelivery.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

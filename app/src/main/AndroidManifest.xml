@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -15,7 +16,7 @@
             android:value="AIzaSyDhsNEN2z7CVHMCm1zI_WE523ZuePvrRYE" />
 
         <activity
-            android:name="com.example.pizzadelivery.MainActivity"
+            android:name="com.example.pizzadelivery.activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.pizzadelivery.phoneVerify.PhoneAuthActivity" />
     </application>
 
 </manifest>
