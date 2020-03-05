@@ -14,7 +14,10 @@
         android:theme="@style/AppTheme">
         <meta-data android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyDhsNEN2z7CVHMCm1zI_WE523ZuePvrRYE" />
-
+        <activity
+            android:name="com.example.pizzadelivery.phoneVerify.PhoneAuthActivity"
+            android:label="@string/label_phone_auth"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.pizzadelivery.activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -24,7 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.pizzadelivery.phoneVerify.PhoneAuthActivity" />
+
     </application>
 
 </manifest>

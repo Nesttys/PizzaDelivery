@@ -1,13 +1,17 @@
 package com.example.pizzadelivery.model;
 
 public class Order {
-    private String stringOrder;
+    private String order;
 
-    public Order(String stringOrder) {
-        this.stringOrder = stringOrder;
+    public Order() {
+
     }
 
     public String getStringOrder() {
-        return stringOrder;
+        return order;
+    }
+
+    public void setOrder(String order) {
+        this.order = order;
     }
 }

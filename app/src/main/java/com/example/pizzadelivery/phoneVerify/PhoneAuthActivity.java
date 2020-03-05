@@ -29,6 +29,7 @@ import java.util.concurrent.TimeUnit;
 
 public class PhoneAuthActivity extends AppCompatActivity implements
         View.OnClickListener {
+    private static final String SOMETHING = "APP";
 
     private static final String TAG = "PhoneAuthActivity";
 

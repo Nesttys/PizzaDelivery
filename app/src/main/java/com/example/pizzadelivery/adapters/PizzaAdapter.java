@@ -14,7 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
 import com.example.pizzadelivery.Email;
+import com.example.pizzadelivery.model.Order;
 import com.example.pizzadelivery.model.Pizza;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -24,15 +27,14 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
 
     private List<Pizza> pizzaList;
     private StringBuilder str ;
-
     private TextView tvWeight;
     private TextView tvPrice;
     private TextView tvIngridients;
     private TextView tvNameOfpizza;
-
+    DatabaseReference myRef;
     private RadioGroup rg1;
     private RadioGroup rg2;
-
+    Order order;
     private Email email;
 
     public PizzaAdapter(List<Pizza> pizzaList) {
@@ -62,6 +64,8 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
                         .setView(view);
 
                 str = new StringBuilder();
+                order = new Order();
+                myRef = FirebaseDatabase.getInstance().getReference().child("Order");
 
                 tvWeight = view.findViewById(R.id.tvWeight);
                 tvPrice = view.findViewById(R.id.tvPrice);
@@ -78,9 +82,16 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
                 tvIngridients.setText(pizzaList.get(position).getComponents());
 
                 Button btSendemail = view.findViewById(R.id.btsendemail);
+
                 btSendemail.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        order.setOrder(str.toString().trim());
+
+                        myRef.push().setValue(order);
+
+
+
 //                        email = new Email();
 //                        email.sendMail(str.toString());
 
@@ -106,15 +117,15 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
                 str.append("Small pizza 500g 88grn");
                 break;
             case R.id.rdmedium:
-                tvWeight.setText("500g");
+                tvWeight.setText("600g");
                 tvPrice.setText("165grn");
-                str.append("Medium pizza");
+                str.append("Medium pizza, 600g, 165grn");
                 break;
 
             case R.id.rdlarge:
-                tvWeight.setText("500g");
+                tvWeight.setText("700g");
                 tvPrice.setText("200grn");
-                str.append("Large pizza");
+                str.append("Large pizza, 800, 200grn");
                 break;
 
             case R.id.rdstandart:
