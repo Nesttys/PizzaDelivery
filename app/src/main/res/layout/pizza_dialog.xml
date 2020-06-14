@@ -48,19 +48,20 @@
             android:id="@+id/rdsmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Small" />
+            android:checked="true"
+            android:text="Маленькая" />
 
         <RadioButton
             android:id="@+id/rdmedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Medium" />
+            android:text="Средняя" />
 
         <RadioButton
             android:id="@+id/rdlarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Large" />
+            android:text="Большая" />
     </RadioGroup>
 
     <TextView
@@ -84,22 +85,20 @@
             android:id="@+id/rdstandart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Standart"
-            />
+            android:checked="true"
+            android:text="Стандарт" />
 
         <RadioButton
             android:id="@+id/rdthin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thin"
-            />
+            android:text="Тонкое" />
 
         <RadioButton
             android:id="@+id/rdhotdog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hot-dog"
-            />
+            android:text="Борт Хот-Дог" />
     </RadioGroup>
 
     <TextView
@@ -117,7 +116,7 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginBottom="8dp"
-        android:text="Button"
+        android:text="Заказать"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -129,7 +128,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="16dp"
-        android:text="Цена"
+        android:text="88 грн"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

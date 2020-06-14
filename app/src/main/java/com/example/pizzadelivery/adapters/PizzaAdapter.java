@@ -1,5 +1,6 @@
 package com.example.pizzadelivery.adapters;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
-import com.example.pizzadelivery.Email;
 import com.example.pizzadelivery.model.Order;
 import com.example.pizzadelivery.model.Pizza;
 import com.google.firebase.database.DatabaseReference;
@@ -26,16 +26,18 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
         implements RadioGroup.OnCheckedChangeListener {
 
     private List<Pizza> pizzaList;
-    private StringBuilder str ;
+    private StringBuilder size ;
+    private StringBuilder bortiki ;
     private TextView tvWeight;
     private TextView tvPrice;
     private TextView tvIngridients;
     private TextView tvNameOfpizza;
+    private int weight = 500;
+    private boolean isThin = false;
     DatabaseReference myRef;
     private RadioGroup rg1;
     private RadioGroup rg2;
     Order order;
-    private Email email;
 
     public PizzaAdapter(List<Pizza> pizzaList) {
         this.pizzaList = pizzaList;
@@ -63,11 +65,13 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
                 AlertDialog.Builder builder = new AlertDialog.Builder(holder.itemView.getContext())
                         .setView(view);
 
-                str = new StringBuilder();
+                size = new StringBuilder();
+                bortiki = new StringBuilder();
                 order = new Order();
                 myRef = FirebaseDatabase.getInstance().getReference().child("Order");
 
                 tvWeight = view.findViewById(R.id.tvWeight);
+                tvWeight.setText(500 + "g");
                 tvPrice = view.findViewById(R.id.tvPrice);
                 tvNameOfpizza = view.findViewById(R.id.nameofpizza);
                 tvIngridients = view.findViewById(R.id.ingridientsofpizza);
@@ -86,7 +90,7 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
                 btSendemail.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        order.setOrder(str.toString().trim());
+                        order.setOrder(size.toString().trim() + bortiki.toString());
 
                         myRef.push().setValue(order);
 
@@ -108,41 +112,58 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
     public int getItemCount() {
         return pizzaList.size();
     }
+    @SuppressLint("SetTextI18n")
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
+
         switch (checkedId){
             case R.id.rdsmall:
-                tvWeight.setText("500g");
-                tvPrice.setText("88grn");
-                str.append("Small pizza 500g 88grn");
+                weight = 500;
+//                tvWeight.setText(weight +"g");;
+                tvPrice.setText(88 + "грн");
+
+                size.setLength(0);
+                size.append(tvNameOfpizza.getText()+ " " + "Small pizza 500g 88grn ");
                 break;
             case R.id.rdmedium:
-                tvWeight.setText("600g");
-                tvPrice.setText("165grn");
-                str.append("Medium pizza, 600g, 165grn");
+                weight = 600;
+//                tvWeight.setText(weight + "g");
+                tvPrice.setText(165 + "грн");
+                size.setLength(0);
+                size.append(tvNameOfpizza.getText()+ " " + "Medium pizza, 165grn ");
                 break;
 
             case R.id.rdlarge:
-                tvWeight.setText("700g");
-                tvPrice.setText("200grn");
-                str.append("Large pizza, 800, 200grn");
+                weight = 800;
+//                tvWeight.setText(weight + "g");
+                tvPrice.setText(200 + "грн");
+                size.setLength(0);
+                size.append(tvNameOfpizza.getText() + " " + "Large pizza, 800, 200grn ");
                 break;
 
             case R.id.rdstandart:
-                str.append(" Standart pizza");
+                isThin = false;
+                bortiki.setLength(0);
+                bortiki.append("Standart pizza");
                 break;
 
             case R.id.rdthin:
-                str.append(" Thin pizza");
+                isThin = true;
+                bortiki.setLength(0);
+                bortiki.append("Thin pizza");
                 break;
 
             case R.id.rdhotdog:
-                str.append(" Hot-dog pizza");
+                isThin = false;
+                bortiki.setLength(0);
+                bortiki.append("Hot-dog pizza");
                 break;
 
             default:
-                str.append("skdjfsdkplf");
+                bortiki.append("skdjfsdkplf");
         }
+
+        tvWeight.setText((isThin ? weight - 100 : weight) + "г");
     }
 
     static class MyViewHolder extends RecyclerView.ViewHolder{

@@ -27,10 +27,10 @@ public class DrinksFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         List<Drinks> drinksList = new ArrayList<>();
-        drinksList.add(new Drinks("http://i.imgur.com/DvpvklR.png", "Пеперони", "Моцарелла, Салями"));
-        drinksList.add(new Drinks("http://i.imgur.com/DvpvklR.png", "Американа", "Моцарелла, Салями, Оливки"));
-        drinksList.add(new Drinks("http://i.imgur.com/DvpvklR.png", "Маргарита", "Моцарелла, Салями, A"));
-        drinksList.add(new Drinks("http://i.imgur.com/DvpvklR.png", "4 Сыра", "Моцарелла, Салями, B"));
+        drinksList.add(new Drinks("https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Pepsi_05L_Blue-thumbnail-960x960.png", "Pepsi", "500мл"));
+        drinksList.add(new Drinks("https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Pepsi_05L_BlackMAX-thumbnail-960x960.png", "Pepsi Max", "500мл"));
+        drinksList.add(new Drinks("https://media.dominos.ua/__sized__/menu/product_osg_image_category/2020/03/04/Pepsi_05L_Mango_new-min-thumbnail-960x960.png", "Pepsi Манго", "500мл"));
+        drinksList.add(new Drinks("https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Aqua_Minerale_05_gaz-thumbnail-960x960.png", "Aqua Minerale", "500 мл"));
 
         View view = inflater.inflate(R.layout.drinks_fragment, container, false);
         recyclerView = view.findViewById(R.id.recycler_view_drinks);

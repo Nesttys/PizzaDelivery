@@ -33,10 +33,10 @@ public class PizzaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         List<Pizza> pizzaList = new ArrayList<>();
-        pizzaList.add(new Pizza("http://kulinarnia.ru/wp-content/uploads/2015/03/recept-nastoiashchei-italianskoi-pitctcy-margarita.jpg", "Пеперони", "Моцарелла, Салями", 120));
-        pizzaList.add(new Pizza("http://i.imgur.com/DvpvklR.png", "Американа", "Моцарелла, Салями, Оливки", 130));
-        pizzaList.add(new Pizza("http://i.imgur.com/DvpvklR.png", "Маргарита", "Моцарелла, Салями, A", 140));
-        pizzaList.add(new Pizza("https://www.djurenko.com/wp-content/uploads/2011/10/pizza-4formaggi_09.jpg", "4 Сыра", "Моцарелла, Салями, B", 150));
+        pizzaList.add(new Pizza("https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9F%D0%B5%D0%BF%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D0%B8_300dpi-min-thumbnail-960x960-70.jpg", "Пепперони", "Моцарелла, Салями, Соус", 88));
+        pizzaList.add(new Pizza("https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9A%D0%B0%D1%80%D0%B1%D0%BE%D0%BD%D0%B0%D1%80%D0%B0_300dpi-min-thumbnail-960x960-70.jpg", "Карбонара", "Лук, Бекон, Ветчина, Грибы, Моцарелла, Соус ", 88));
+        pizzaList.add(new Pizza("https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0_300dpi-min-thumbnail-960x960-70.jpg", "Маргарита", "Моцарелла, Соус", 88));
+        pizzaList.add(new Pizza("https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9F%D1%8F%D1%82%D1%8C_%D1%81%D1%8B%D1%80%D0%BE%D0%B2_300dpi-min-thumbnail-960x960-70.jpg", "4 Сыра", "Моцарелла, Чеддер, Бергадер Блю, Пармезан", 88));
 
         View view = inflater.inflate(R.layout.fragment_blank, container, false);
         recyclerView = view.findViewById(R.id.recycler_view_pizza);
