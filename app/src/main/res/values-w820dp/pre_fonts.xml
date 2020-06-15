@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <array name="pre_fonts" translatable="false" tools:ignore="MissingDefaultResource">
+        <item>@font/open_sans_bold</item>
+        <item>@font/open_sans_semibold</item>
+    </array>
+</resources>

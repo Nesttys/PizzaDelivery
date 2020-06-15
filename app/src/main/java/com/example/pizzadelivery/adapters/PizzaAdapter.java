@@ -13,7 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.R;
+import com.example.pizzadelivery.R;
 import com.example.pizzadelivery.model.Order;
 import com.example.pizzadelivery.model.Pizza;
 import com.google.firebase.database.DatabaseReference;
@@ -47,7 +47,7 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(com.example.myapplication.R.layout.card_view,parent,false);
+                .inflate(com.example.pizzadelivery.R.layout.card_view,parent,false);
         return new MyViewHolder(view);
     }
 
@@ -175,10 +175,10 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
 
         MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            image = itemView.findViewById(com.example.myapplication.R.id.pizza_photo);
-            name = itemView.findViewById(com.example.myapplication.R.id.pizza_name);
-            components = itemView.findViewById(com.example.myapplication.R.id.pizza_components);
-            price = itemView.findViewById(com.example.myapplication.R.id.pizza_price);
+            image = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_photo);
+            name = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_name);
+            components = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_components);
+            price = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_price);
             order = itemView.findViewById(R.id.order);
         }
     }

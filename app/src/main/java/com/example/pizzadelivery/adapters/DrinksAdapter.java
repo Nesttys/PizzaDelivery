@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.R;
+import com.example.pizzadelivery.R;
 import com.example.pizzadelivery.model.Drinks;
 import com.squareup.picasso.Picasso;
 
@@ -25,7 +25,7 @@ public class DrinksAdapter  extends RecyclerView.Adapter<DrinksAdapter.MyViewHol
     @NonNull
     @Override
     public DrinksAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(com.example.myapplication.R.layout.card_view,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(com.example.pizzadelivery.R.layout.card_view,parent,false);
         return new DrinksAdapter.MyViewHolder(view);
     }
 
@@ -44,9 +44,9 @@ public class DrinksAdapter  extends RecyclerView.Adapter<DrinksAdapter.MyViewHol
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            image = itemView.findViewById(com.example.myapplication.R.id.pizza_photo);
-            name = itemView.findViewById(com.example.myapplication.R.id.pizza_name);
-            components = itemView.findViewById(com.example.myapplication.R.id.pizza_components);
+            image = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_photo);
+            name = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_name);
+            components = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_components);
             order = itemView.findViewById(R.id.order);
             order.setVisibility(View.GONE);
         }

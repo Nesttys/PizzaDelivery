@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.example.pizzadelivery.fragments.DrinksFragment;
 import com.example.pizzadelivery.fragments.PizzaFragment;
 import com.example.pizzadelivery.fragments.MapViewFragment;
-import com.example.myapplication.R;
+import com.example.pizzadelivery.R;
 import com.example.pizzadelivery.fragments.StocksFragment;
 
 /**

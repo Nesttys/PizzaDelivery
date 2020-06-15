@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.R;
+import com.example.pizzadelivery.R;
 import com.example.pizzadelivery.adapters.DrinksAdapter;
 import com.example.pizzadelivery.model.Drinks;
 

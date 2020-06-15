@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pizzadelivery.model.Pizza;
 import com.example.pizzadelivery.adapters.PizzaAdapter;
-import com.example.myapplication.R;
+import com.example.pizzadelivery.R;
 
 import java.util.ArrayList;
 import java.util.List;

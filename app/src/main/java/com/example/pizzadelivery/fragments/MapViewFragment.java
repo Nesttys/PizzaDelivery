@@ -26,9 +26,9 @@ public class MapViewFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(com.example.myapplication.R.layout.location_fragment, container, false);
+        View rootView = inflater.inflate(com.example.pizzadelivery.R.layout.location_fragment, container, false);
 
-        mMapView = rootView.findViewById(com.example.myapplication.R.id.map_view);
+        mMapView = rootView.findViewById(com.example.pizzadelivery.R.id.map_view);
         mMapView.onCreate(savedInstanceState);
 
         mMapView.onResume(); // needed to get the map to display immediately
