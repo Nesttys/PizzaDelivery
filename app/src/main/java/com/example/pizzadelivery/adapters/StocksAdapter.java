@@ -45,14 +45,16 @@ public class StocksAdapter extends RecyclerView.Adapter<StocksAdapter.MyViewHold
         TextView name;
         TextView components;
         Button order;
-
+        TextView price;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_photo);
             name = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_name);
             components = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_components);
+            price = itemView.findViewById(R.id.pizza_price);
             order = itemView.findViewById(R.id.order);
             order.setVisibility(View.GONE);
+            price.setVisibility(View.GONE);
         }
     }
 }

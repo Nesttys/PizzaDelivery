@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/pizza_name"
                 android:textColor="#000"
-                android:textSize="30sp"
+                android:textSize="26sp"
                 android:layout_below="@+id/pizza_photo" />
 
             <TextView
@@ -41,7 +41,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pizza_components"
-                android:textSize="30sp" />
+                android:text="*указывать при звонке"
+                android:textColor="#000"
+                android:textSize="25sp" />
 
             <Button
                 android:id="@+id/order"
@@ -49,8 +51,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="14dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="заказать" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

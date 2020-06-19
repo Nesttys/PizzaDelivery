@@ -97,4 +97,6 @@
     <string name="custom_auth_signin_status_failed">Error: sign in failed</string>
 
     <string name="error_sign_in_failed">Sign in failed, see logs for details.</string>
+    <string name="phone">Phone</string>
+    <string name="order">Заказать</string>
 </resources>

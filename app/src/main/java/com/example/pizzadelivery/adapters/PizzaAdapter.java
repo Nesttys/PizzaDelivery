@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -28,10 +29,13 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
     private List<Pizza> pizzaList;
     private StringBuilder size ;
     private StringBuilder bortiki ;
+    private StringBuilder phone ;
+
     private TextView tvWeight;
     private TextView tvPrice;
     private TextView tvIngridients;
     private TextView tvNameOfpizza;
+    private EditText etPhone;
     private int weight = 500;
     private boolean isThin = false;
     DatabaseReference myRef;
@@ -67,6 +71,7 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
 
                 size = new StringBuilder();
                 bortiki = new StringBuilder();
+                phone = new StringBuilder();
                 order = new Order();
                 myRef = FirebaseDatabase.getInstance().getReference().child("Order");
 
@@ -75,7 +80,7 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
                 tvPrice = view.findViewById(R.id.tvPrice);
                 tvNameOfpizza = view.findViewById(R.id.nameofpizza);
                 tvIngridients = view.findViewById(R.id.ingridientsofpizza);
-
+                etPhone = view.findViewById(R.id.etPhone);
                 rg1 =view.findViewById(R.id.radioGroup);
                 rg1.setOnCheckedChangeListener(PizzaAdapter.this);
 
@@ -85,24 +90,19 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
                 tvNameOfpizza.setText(pizzaList.get(position).getName());
                 tvIngridients.setText(pizzaList.get(position).getComponents());
 
-                Button btSendemail = view.findViewById(R.id.btsendemail);
-
-                btSendemail.setOnClickListener(new View.OnClickListener() {
+                Button btSendOrder = view.findViewById(R.id.btsendemail);
+                AlertDialog dialog = builder.create();
+                dialog.show();
+                btSendOrder.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        order.setOrder(size.toString().trim() + bortiki.toString());
+                        order.setOrder(phone + size.toString().trim() + bortiki);
 
                         myRef.push().setValue(order);
 
-
-
-//                        email = new Email();
-//                        email.sendMail(str.toString());
-
                     }
                 });
-                AlertDialog dialog = builder.create();
-                dialog.show();
+
 
             }
         });
@@ -119,15 +119,12 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
         switch (checkedId){
             case R.id.rdsmall:
                 weight = 500;
-//                tvWeight.setText(weight +"g");;
                 tvPrice.setText(88 + "грн");
-
                 size.setLength(0);
                 size.append(tvNameOfpizza.getText()+ " " + "Small pizza 500g 88grn ");
                 break;
             case R.id.rdmedium:
                 weight = 600;
-//                tvWeight.setText(weight + "g");
                 tvPrice.setText(165 + "грн");
                 size.setLength(0);
                 size.append(tvNameOfpizza.getText()+ " " + "Medium pizza, 165grn ");
@@ -135,7 +132,6 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
 
             case R.id.rdlarge:
                 weight = 800;
-//                tvWeight.setText(weight + "g");
                 tvPrice.setText(200 + "грн");
                 size.setLength(0);
                 size.append(tvNameOfpizza.getText() + " " + "Large pizza, 800, 200grn ");
@@ -144,24 +140,25 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
             case R.id.rdstandart:
                 isThin = false;
                 bortiki.setLength(0);
-                bortiki.append("Standart pizza");
+                bortiki.append("Standart ");
                 break;
 
             case R.id.rdthin:
                 isThin = true;
                 bortiki.setLength(0);
-                bortiki.append("Thin pizza");
+                bortiki.append("Thin ");
                 break;
 
             case R.id.rdhotdog:
                 isThin = false;
                 bortiki.setLength(0);
-                bortiki.append("Hot-dog pizza");
+                bortiki.append("Hot-dog ");
                 break;
 
             default:
                 bortiki.append("skdjfsdkplf");
         }
+        phone.append(etPhone.getText().toString());
 
         tvWeight.setText((isThin ? weight - 100 : weight) + "г");
     }
@@ -172,14 +169,16 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
         TextView components;
         TextView price;
         Button order;
-
+        EditText phone;
         MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            image = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_photo);
-            name = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_name);
-            components = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_components);
-            price = itemView.findViewById(com.example.pizzadelivery.R.id.pizza_price);
+            image = itemView.findViewById(R.id.pizza_photo);
+            name = itemView.findViewById(R.id.pizza_name);
+            components = itemView.findViewById(R.id.pizza_components);
+            price = itemView.findViewById(R.id.pizza_price);
+            phone = itemView.findViewById(R.id.etPhone);
             order = itemView.findViewById(R.id.order);
+            
         }
     }
 

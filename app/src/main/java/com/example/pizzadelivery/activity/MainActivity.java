@@ -1,6 +1,8 @@
 package com.example.pizzadelivery.activity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -18,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseUser mCurrentUser;
+    String phoneNo = "+380667662171";
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +30,14 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mCurrentUser = mAuth.getCurrentUser();
+        //callButton = findViewById(R.id.fab);
 
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = findViewById(com.example.pizzadelivery.R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(com.example.pizzadelivery.R.id.tabs);
         tabs.setupWithViewPager(viewPager);
-        FloatingActionButton fab = findViewById(com.example.pizzadelivery.R.id.fab);
-
+        fab = findViewById(com.example.pizzadelivery.R.id.fab);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +46,14 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
+        fab.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("MissingPermission")
+            @Override
+            public void onClick(View v) {
+                String dial = "tel:" + phoneNo;
+                startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(dial)));
+            }
+        });
     }
     @Override
     protected void onStart() {
