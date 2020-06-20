@@ -157,6 +157,7 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
 
             default:
                 bortiki.append("skdjfsdkplf");
+                phone.append(etPhone.getText().toString());
         }
         phone.append(etPhone.getText().toString());
 
@@ -169,14 +170,12 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.MyViewHolder
         TextView components;
         TextView price;
         Button order;
-        EditText phone;
         MyViewHolder(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.pizza_photo);
             name = itemView.findViewById(R.id.pizza_name);
             components = itemView.findViewById(R.id.pizza_components);
             price = itemView.findViewById(R.id.pizza_price);
-            phone = itemView.findViewById(R.id.etPhone);
             order = itemView.findViewById(R.id.order);
             
         }

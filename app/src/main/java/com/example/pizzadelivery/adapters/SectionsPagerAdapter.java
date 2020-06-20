@@ -1,4 +1,4 @@
-package com.example.pizzadelivery.ui.main;
+package com.example.pizzadelivery.adapters;
 
 import android.content.Context;
 
@@ -12,6 +12,7 @@ import com.example.pizzadelivery.fragments.DrinksFragment;
 import com.example.pizzadelivery.fragments.PizzaFragment;
 import com.example.pizzadelivery.fragments.MapViewFragment;
 import com.example.pizzadelivery.R;
+import com.example.pizzadelivery.fragments.PlaceholderFragment;
 import com.example.pizzadelivery.fragments.StocksFragment;
 
 /**

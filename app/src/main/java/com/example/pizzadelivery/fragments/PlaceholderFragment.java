@@ -1,4 +1,4 @@
-package com.example.pizzadelivery.ui.main;
+package com.example.pizzadelivery.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.pizzadelivery.R;
+import com.example.pizzadelivery.model.PageViewModel;
 
 /**
  * A placeholder fragment containing a simple view.

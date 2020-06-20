@@ -13,14 +13,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/activity/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/adapters/PizzaAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/adapters/PizzaAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/adapters/StocksAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/adapters/StocksAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/fragments/PizzaFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/fragments/PizzaFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/ui/main/PageViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/model/PageViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/ui/main/PlaceholderFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/fragments/PlaceholderFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/ui/main/SectionsPagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pizzadelivery/adapters/SectionsPagerAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/card_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/card_view.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/pizza_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/pizza_dialog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -233,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592247881083</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Изменил всякие мелочи">
+      <created>1592576073963</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1592576073963</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -258,6 +263,7 @@
     <MESSAGE value=" добалено почти рабочее отправление заказа на почту" />
     <MESSAGE value="Стало красивее" />
     <MESSAGE value="Добавил авторизацию через номер телефона" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил авторизацию через номер телефона" />
+    <MESSAGE value="Изменил всякие мелочи" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменил всякие мелочи" />
   </component>
 </project>

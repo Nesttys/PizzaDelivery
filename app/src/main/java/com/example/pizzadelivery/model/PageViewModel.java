@@ -1,4 +1,4 @@
-package com.example.pizzadelivery.ui.main;
+package com.example.pizzadelivery.model;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
